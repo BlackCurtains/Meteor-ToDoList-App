@@ -1,0 +1,34 @@
+<head>
+  <title>todo</title>
+</head>
+
+<body>
+<div class="container">MY TODO's <hr/>
+{{> loginButtons}}</div>
+  <div class="main-content">
+    <div class="container">
+      {{>main}}
+    </div>
+  </div>
+</body>
+
+<template name="main">
+  {{#if currentUser}}
+  <form class="new-todo">
+    <div class="form-group">
+      <input type="text" name="text" placeholder="Type todo">
+    </div>
+  </form>
+  {{/if}}
+<ul>
+  {{#each todos}}
+    <li class="{{#if checked}}checked{{/if}}">
+      {{#if currentUser}}
+      <button class="delete-todo">X</button>
+      <input type="checkbox" class="toggle-check" checked="{{checked}}">
+      {{/if}}
+      {{text}}
+    </li>
+  {{/each}}
+</ul>
+</template>

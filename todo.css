@@ -1,0 +1,17 @@
+/* CSS declarations go here */
+.main-content{
+  margin: 50px 0;
+}
+ul li{
+  list-style-type: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+li.checked{
+  color: red;
+  text-decoration: line-through;
+}
+.delete-todo{
+  float: right;
+  border: none;
+}
